@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APT Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <button>
+      <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <rect width="18" height="1.5" fill=red ry="0.75" x="3" y="6.25" />
+        <rect width="18" height="1.5" fill=red ry="0.75" x="3" y="11.25" />
+        <rect width="18" height="1.5" fill=red ry="0.75" x="3" y="16.25" />
+      </svg>
+    </button>
+  </nav>
+  <div class="background-top"></div>
+    <a href="#next-bit">
+      <div class="logo-container">
+        <div class="curlies frag"><div class="r-curly">{</div><div class="l-curly">}</div></div>
+        <div class="apt frag">APT</div>
+        <div class="web-design frag">Web Design</div>
+        <div class="cursor frag">_</div>
+      </div>
+    </a>
+    <div class="gap">hello</div>
+    <main id="next-bit">
+      <div class="equal-columns">
+        <h2>Package One</h2>
+        <ul>
+          <li>3-PAGE WEBSITE (additional pages may be added, £30 per page)</li>
+          <li>MODERN, RESPONSIVE DESIGN (works across all devices)</li>
+          <li>BUILT TO YOUR SPECIFICATIONS (we design it, you tweak it)</li>
+          <li>IMAGES we generate AI images, or you supply your own or purchased images with proof of commercial license</li>
+          <li>TEXT (you provide original text or we write basic content based on your business information)</li>
+          <li>BASIC SEO (provided on all main pages)</li>
+          <li>POLICIES (we provide standard cookies policy, privacy policy and terms & conditions)</li>
+          <li>12 UPDATES PER YEAR (changes to existing text or images)</li>
+          <li>SECURE SSL CERTIFICATE (https security for you and your visitors)</li>
+          <li>BACKGROUND SECURITY UPDATES (we keep your site safe and secure)</li>
+        </ul>
+        <button>Sign Up</button>
+      </div>
+      <div class="equal-columns">
+        <h2>Package Two</h2>
+        <ul>
+          <li>3-PAGE WEBSITE (additional pages may be added, £30 per page)</li>
+          <li>MODERN, RESPONSIVE DESIGN (works across all devices)</li>
+          <li>BUILT TO YOUR SPECIFICATIONS (we design it, you tweak it)</li>
+          <li>IMAGES we generate AI images, or you supply your own or purchased images with proof of commercial license</li>
+          <li>TEXT (you provide original text or we write basic content based on your business information)</li>
+          <li>BASIC SEO (provided on all main pages)</li>
+          <li>POLICIES (we provide standard cookies policy, privacy policy and terms & conditions)</li>
+          <li>12 UPDATES PER YEAR (changes to existing text or images)</li>
+          <li>SECURE SSL CERTIFICATE (https security for you and your visitors)</li>
+          <li>BACKGROUND SECURITY UPDATES (we keep your site safe and secure)</li>
+        </ul>
+        <button>Sign Up</button>
+      </div>
+    </main>
+    <div class="gap"></div>
+    <script>
+      const TOGGLE = document.querySelector('button')
+
+      const HANDLE_TOGGLE = () => {
+        TOGGLE.setAttribute('aria-pressed', TOGGLE.matches('[aria-pressed=true]') ? false : true)
+      }
+
+      TOGGLE.addEventListener('click', HANDLE_TOGGLE)
+
+      const INPUT = document.querySelector('input')
+
+      const APPLY_TRANSFORM_BOX = () => {
+        TOGGLE.classList.toggle('unset')
+      }
+
+      INPUT.addEventListener('change', APPLY_TRANSFORM_BOX)
+    </script>
+</body>
+</html>
