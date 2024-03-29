@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APT Web Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
   <nav>
@@ -25,8 +26,12 @@
         <div class="cursor frag">_</div>
       </div>
     </a>
-    <div class="gap">hello</div>
-    <main id="next-bit">
+    <div class="gap">gap1</div>
+    <main>
+      
+    </main>
+    <div class="gap">gap2</div>
+    <div id="next-bit">
       <div class="equal-columns">
         <h2>Package One</h2>
         <ul>
@@ -59,24 +64,8 @@
         </ul>
         <button>Sign Up</button>
       </div>
-    </main>
+    </div>
     <div class="gap"></div>
-    <script>
-      const TOGGLE = document.querySelector('button')
-
-      const HANDLE_TOGGLE = () => {
-        TOGGLE.setAttribute('aria-pressed', TOGGLE.matches('[aria-pressed=true]') ? false : true)
-      }
-
-      TOGGLE.addEventListener('click', HANDLE_TOGGLE)
-
-      const INPUT = document.querySelector('input')
-
-      const APPLY_TRANSFORM_BOX = () => {
-        TOGGLE.classList.toggle('unset')
-      }
-
-      INPUT.addEventListener('change', APPLY_TRANSFORM_BOX)
-    </script>
+    <script src="nav.js"></script>
 </body>
 </html>
