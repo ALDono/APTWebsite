@@ -78,6 +78,11 @@ html:focus-within {
 
 /* End of CSS Reset */
 
+a{
+  text-decoration: none;
+  color:white;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -87,6 +92,14 @@ body{
   font-family: sans-serif;
 }
 
+.gap{
+  height: 2000px;
+}
+
+/**************/
+/* Background */
+/**************/
+
 .background-top{
   position: fixed;
   width: 100vw;
@@ -95,23 +108,7 @@ body{
   animation: lightenUp linear forwards;
   animation-timeline: scroll();
   z-index: -1;
-  /* display: none; */
 }
-
-nav{
-  position: fixed;
-  padding: 1rem;
-  z-index: 20;
-  color: white;
-  background-color: black;
-  animation: lightenUp linear forwards;
-  animation-timeline: scroll();
-}
-
-.gap{
-  height: 2000px;
-}
-
 
 @keyframes lightenUp {
   100%{
@@ -119,6 +116,75 @@ nav{
   }
   
 }
+
+
+/**************/
+/* Navigation */
+/**************/
+
+nav{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  padding: 1rem;
+  z-index: 20;
+  color: white;
+  background-color: none;
+  /* animation: lightenUp linear forwards;
+  animation-timeline: scroll(); */
+}
+
+.nav-list ul{
+  list-style: none;
+  display: flex;
+  gap: 0rem;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.nav-list-animate{
+  animation: navIn 0.3s linear forwards;
+}
+
+@keyframes navIn {
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+    gap: 1rem;
+  }
+}
+
+.nav-list-animate-out{
+  animation: navOut 0.3s linear forwards;
+}
+
+@keyframes navOut {
+  from{
+    opacity: 1;
+    transform: translateY(0px);
+    gap: 1rem;
+  }
+  to{
+    opacity: 0;
+    transform: translateY(-100px);
+    gap: 0rem;
+  }
+}
+
+.nav-links{
+  font-size: 2rem;
+}
+
+.nav-links:hover{
+  text-decoration: underline;
+}
+
+
+
+
+/**********************/
+/* Logo and Animation */
+/**********************/
 
 .logo-container{
   font-size: 4rem;
@@ -132,15 +198,9 @@ nav{
   animation: fadeOut linear forwards;
   animation-timeline: view();
   animation-range: exit-crossing;
-
-  /* animation-range: entry 500px; */
 }
 
 @keyframes fadeOut{
-  /* 50%{
-    opacity: 1;
-    transform: translateX(0px);
-  } */
   100%{
     transform: translateX(500px);
     opacity: 0;
@@ -230,13 +290,36 @@ nav{
     opacity: 1;
   }
 }
+/****************/
+/* Main Section */
+/****************/
 
-a{
-  text-decoration: none;
-  color:white;
+main{
+  display: flex;
+  gap: 12rem;
+  justify-content: center;
+  padding: 4rem;
+  padding-top: 10rem;
 }
 
-.options{
+.equal-columns-main{
+  padding: 25px;
+  color: white;
+  max-width: 500px;
+  font-size: 1.5rem;
+}
+
+.main-left{
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+/*******************/
+/* packages Section*/
+/*******************/
+
+.packages{
   display: flex;
   flex-wrap: wrap;
   gap: 10rem;
@@ -246,14 +329,11 @@ a{
   padding: 25px;
   animation: moveFromRight linear forwards;
   animation-timeline: view();
+  animation-range: entry;
 }
 
 @keyframes moveFromRight {
-  70%{
-    opacity: 1;
-    gap:3rem
-  }
-  100%{
+  to{
     opacity: 1;
     gap: 3rem;
   }
