@@ -129,8 +129,22 @@ nav{
   background-color: black;
   color: white;
   position: relative;
-  animation: lightenUp linear forwards;
-  animation-timeline: scroll();
+  animation: fadeOut linear forwards;
+  animation-timeline: view();
+  animation-range: exit-crossing;
+
+  /* animation-range: entry 500px; */
+}
+
+@keyframes fadeOut{
+  /* 50%{
+    opacity: 1;
+    transform: translateX(0px);
+  } */
+  100%{
+    transform: translateX(500px);
+    opacity: 0;
+  }
 }
 
 .logo-container:hover{
@@ -222,15 +236,28 @@ a{
   color:white;
 }
 
-main{
+.options{
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 10rem;
+  opacity: 0;
   justify-content: center;
   margin: 0 auto;
   padding: 25px;
+  animation: moveFromRight linear forwards;
+  animation-timeline: view();
 }
 
+@keyframes moveFromRight {
+  70%{
+    opacity: 1;
+    gap:3rem
+  }
+  100%{
+    opacity: 1;
+    gap: 3rem;
+  }
+}
 .equal-columns{
   padding: 25px;
   border: white 2px solid;
