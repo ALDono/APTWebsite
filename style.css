@@ -178,13 +178,32 @@ a{
 
 /* header */
 
+
+
 header{
+  --animationStartsAfter: 100px;
+  --animationDistanceLength: 200px;
+  --logoDisplay: block;
+
+  position: sticky;
+  z-index: 1000;
+  top: -20rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 100vw;
+  margin: 0 auto;
+  /* Will get this working later */
+  /* @supports (animation-timeline: view()){
+    backdrop-filter: blur(0.15rem);
+    animation: headerScroll linear forwards;
+    animation-timeline: view();
+    animation-range-start: calc(100vh + var(--animationStartsAfter));
+    animation-range-end: calc(100vh + var(--animationStartsAfter) + var(--animationDistanceLength));
+  } */
+
   ul{
     list-style: none;
     padding: 0px;
@@ -196,12 +215,31 @@ header{
   }
 }
 
+@keyframes headerScroll {
+  0%, 100%{
+    --logoDisplay: none;
+    width: fit-content;
+  }
+  100%{
+    background-color: #F8F7F350;
+    top: 1rem;
+    border-radius: 100vw;
+    box-shadow: 0rem 0.5rem 0.75rem hsl(0 0% 0% / 0.3);
+  }
+  
+}
+
+
 .nav-links:hover{
   text-decoration: underline;
 }
 
 .logo img{
-  width: 100%;
+  width: 300px;
+}
+
+.logo{
+  display: var(--logoDisplay);
 }
 
 @media(min-width: 750px){
@@ -521,7 +559,9 @@ footer{
   margin-top: 4rem;
   padding: 1rem;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
 .socials{
@@ -541,6 +581,15 @@ footer{
       margin-right: 1rem;
     }
   }
+}
+
+@media(min-width: 750px){
+  footer{
+    flex-direction: row;
+    gap: auto;
+    justify-content: space-evenly;
+  }
+  
 }
 
 
