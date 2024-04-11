@@ -540,6 +540,11 @@ article{
   padding: 1rem;
 }
 
+.form-input:active{
+  border: 3px solid var(--clr-accent-10);
+}
+
+
 .form-message-section{
   margin-top: 2rem;
 }
