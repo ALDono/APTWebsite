@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APT Web Design</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="">
+    </div>
+    <nav>
+      <ul class="para-bold">
+        <li><a class="nav-links" href="index.html">Home</a></li>
+        <li><a class="nav-links" href="index.html#about">About Me</a></li>
+        <li><a class="nav-links" href="index.html#packages">Packages</a></li>
+        <li><a href="index.html#contact"><button class="btn">Contact <img src="images/email.png" width="22px" alt=""></button></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="bg-accent-20">
+    <div class="left-column-wrapper">
+      <div class="left-column-main">
+        <h1 class="main-head">Interested? Fantastic!</h1>
+        <p class="para-bold">Just a few quick questions...</p>
+      </div>
+    </div>
+    <div class="right-column-main">
+    <img src="images/ben-kolde-cpLsWmMEa1Q-unsplash.jpg" alt="">
+    </div>
+  </main>
+
+  <section id="contact" class="contact-section bg-accent-20">
+    <div class="packages-title">
+      <h2 class="sub-head">Questions</h2>
+      <p class="para-main">I won't take up too much of your time</p>
+    </div>
+    <div class="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST" class="para-main">
+        <input type="hidden" name="access_key" value="c0bf58b4-a4d2-4a6e-8c57-26029a115db1">
+        <div class="form-package-input-wrapper">
+          <div class="form-input-section">
+            <label for="name">Full Name: <span class="fc-accent-10">*</span></label><br>
+            <input class="form-input" type="text" name="name" id="name" placeholder="Your name and surname" required>
+          </div>
+          <div class="form-input-section">
+            <label for="email" >E-mail: <span class="fc-accent-10">*</span></label><br>
+            <input class="form-input" type="email" name="email" id="email" placeholder="Please insert your e-mail" required>
+          </div>
+          <div class="form-input-section">
+            <label for="phone">Phone Number:<span class="fc-accent-10">*</span></label><br>
+            <input class="form-input" type="tel" name="phone" id="phone" placeholder="please insert your phone number" required>
+          </div>
+          <fieldset class="form-input-section">
+            <p>Which Package are you enquiring about?<span class="fc-accent-10">*</span></p>
+            <input class="form-radio" type="radio" id="age1" name="Enquiring About" value="Subscription">
+            <label class="form-radio-text" for="age1">Subscription</label><br>
+            <input class="form-radio" type="radio" id="age2" name="Enquiring About" value="One time payment">
+            <label for="age2">One time payment</label><br>  
+            <input class="form-radio" type="radio" id="age3" name="Enquiring About" value="Other">
+            <label for="age3">Other (please detail below)</label>
+          </fieldset>
+          <fieldset class="form-input-section">
+            <p>Do you have an existing Domain name you'd wish to transfer?<span class="fc-accent-10">*</span></p>
+            <input class="form-radio" type="radio" id="1" name="Have an existing Domain?" value="Yes">
+            <label class="form-radio-text" for="1">Yes</label><br>
+            <input class="form-radio" type="radio" id="2" name="Have an existing Domain?" value="No">
+            <label for="2">No</label><br>
+          </fieldset>
+          <div class="form-input-section">
+            <label for="domain">Domain Name:</label><br>
+            <input class="form-input" type="url" name="domain" id="domain" placeholder="Domain name here" required>
+          </div>
+          <fieldset class="form-input-section">
+            <p>Do you require an email address that matches your domain?<span class="fc-accent-10">*</span></p>
+            <input class="form-radio" type="radio" id="1" name="Custom Email" value="Yes">
+            <label class="form-radio-text" for="1">Yes</label><br>
+            <input class="form-radio" type="radio" id="2" name="Custom Email" value="No">
+            <label for="2">No</label><br>
+          </fieldset>
+          <fieldset class="form-input-section">
+            <p>Do you require any Add-Ons?</p>
+            <input class="form-radio" type="checkbox" id="1" name="Addons" value="AddtionalPages">
+            <label class="form-radio-text" for="1">Additional Pages (more than 4)</label><br>
+            <input class="form-radio" type="checkbox" id="2" name="Addons" value="E-commerce">
+            <label for="2">E-commerce Shop</label><br>
+            <input class="form-radio" type="checkbox" id="2" name="Addons" value="Blog">
+            <label for="2">Blog Integration</label><br>
+          </fieldset>
+        </div> 
+        <div class="form-message-section">
+          <label for="message">Extra information: </label><br>
+          <textarea class="form-input-message" type="text" name="message" id="message" placeholder="Any additional information here"></textarea>
+        </div>
+        <br><br>
+        <p class="para-bold">Thank you for your enquiry. Please submit and I will get back to you as soon as possible.</p><br>
+        <input type="submit" value="Submit" class="btn">
+        
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <img src="images/facebook.png" alt="">
+      <img src="images/instagram.png" alt="">
+    </div>
+
+    
+
+    <div class="copyright">
+      <p class="para-main">Copyright @ 2024 APT Web Design. All Rights Reserved</p>
+    </div>
+    <div class="secondary-navigation">
+      <h2 class="sub-head">Navigation</h2>
+      <ul class="para-main">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    const packageBtn = document.querySelector("#packageBtn");
+
+    packageBtn.addEventListener("click", function(){
+      
+    })
+  </script>
+</body>
+</html>
