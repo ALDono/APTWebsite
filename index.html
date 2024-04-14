@@ -21,8 +21,9 @@
     <div class="logo">
       <img src="images/logo.png" alt="">
     </div>
+    <button id="navToggle"><img id="navImage" src="images/more.png" width="48px" alt=""></button>
     <nav>
-      <ul class="para-bold">
+      <ul id="navList" class="para-bold">
         <li><a class="nav-links" href="index.html">Home</a></li>
         <li><a class="nav-links" href="#about">About Me</a></li>
         <li><a class="nav-links" href="#packages">Packages</a></li>
@@ -216,5 +217,22 @@
       </ul>
     </div>
   </footer>
+  <script>
+    const navToggle = document.querySelector("#navToggle");
+    const navList = document.querySelector("#navList");
+    const navImage = document.querySelector("#navImage");
+    let navState = false;
+    navToggle.addEventListener("click",function(){
+      if(navState === false){
+        navState = true;
+        navList.style.display = "flex";
+        navImage.src = "images/close.png";
+      }else{
+        navState = false;
+        navList.style.display = "none";
+        navImage.src = "images/more.png";
+      }
+    })
+  </script>
 </body>
 </html>

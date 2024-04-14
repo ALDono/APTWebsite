@@ -257,7 +257,27 @@ header{
       }
     }
   }
+
+  #navList{
+    display: block;
+  }
+
+  #navToggle{
+    display:none;
+  }
 }
+
+
+#navToggle{
+  margin-top: 2rem;
+  border: none;
+  background: none;
+}
+
+#navList{
+  display: none;
+}
+
 
 
 /* Main Section */
