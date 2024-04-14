@@ -217,22 +217,6 @@
       </ul>
     </div>
   </footer>
-  <script>
-    const navToggle = document.querySelector("#navToggle");
-    const navList = document.querySelector("#navList");
-    const navImage = document.querySelector("#navImage");
-    let navState = false;
-    navToggle.addEventListener("click",function(){
-      if(navState === false){
-        navState = true;
-        navList.style.display = "flex";
-        navImage.src = "images/close.png";
-      }else{
-        navState = false;
-        navList.style.display = "none";
-        navImage.src = "images/more.png";
-      }
-    })
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
