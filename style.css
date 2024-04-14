@@ -172,6 +172,7 @@ a{
   box-shadow: 0px 1px 4px #00000040;;
 }
 
+
 /****************/
 /* Main Styling */
 /****************/
@@ -244,6 +245,16 @@ header{
   display: var(--logoDisplay);
 }
 
+#navToggle{
+  margin-top: 2rem;
+  border: none;
+  background: none;
+}
+
+#navList{
+  display: none;
+}
+
 @media(min-width: 750px){
   header{
     flex-direction: row;
@@ -259,23 +270,12 @@ header{
   }
 
   #navList{
-    display: block;
+    display: flex;
   }
 
   #navToggle{
     display:none;
   }
-}
-
-
-#navToggle{
-  margin-top: 2rem;
-  border: none;
-  background: none;
-}
-
-#navList{
-  display: none;
 }
 
 
@@ -289,6 +289,18 @@ main{
   max-width: 1300px;
   margin: 2rem auto;
 }
+
+.main-packages{
+  padding: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 1300px;
+  margin: 2rem auto;
+  background-image: url("images/jason-leung-Xaanw0s0pMk-unsplash.jpg");
+  background-size: cover;
+}
+
+
 
 .left-column-wrapper{
   display: flex;
