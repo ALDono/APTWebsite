@@ -674,7 +674,7 @@ footer{
   bottom: 0;
   margin: auto;
   max-width: 470px;
-  max-height: 650px;
+  max-height: 750px;
   background-color: var(--clr-accent-20);
   padding: 2rem;
   display: flex;
@@ -693,10 +693,39 @@ footer{
 }
 
 
-#subPriceCard, #otpPriceCard{
+#subPriceCard, #otpPriceCard, #addonCard{
   display:none;
 }
 
+
+
+
+.addon-card-enquiry{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 470px;
+  max-height: 550px;
+  background-color: var(--clr-accent-20);
+  border: 3px solid var(--clr-accent-10);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  ul{
+    list-style: none;
+    li{
+      margin-top: 1rem;
+    }
+    p{
+      font-size: 0.8rem;
+      font-weight: var(--fw-reg);
+    }
+  }
+}
 
 
 
