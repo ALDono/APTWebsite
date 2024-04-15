@@ -58,12 +58,16 @@
             <label for="phone">Phone Number:<span class="fc-accent-10">*</span></label><br>
             <input class="form-input" type="tel" name="phone" id="phone" placeholder="please insert your phone number" required>
           </div>
+          <div class="form-message-section">
+            <label for="message">Tell me a little bit about yourself/your business </label><br>
+            <textarea class="form-input-message" type="text" name="selfinfo" id="selfinfo" placeholder="Information on yourself or your business here"></textarea>
+          </div>
           <fieldset class="form-input-section">
             <p>Which Package are you enquiring about?<span class="fc-accent-10">*</span></p>
             <input class="form-radio" type="radio" id="age1" name="Enquiring About" value="Subscription">
-            <label class="form-radio-text" for="age1">Subscription</label><br>
+            <label class="form-radio-text" for="age1">Subscription <button id="subBtn" class="fc-accent-10 info-btn">(info)</button></label><br>
             <input class="form-radio" type="radio" id="age2" name="Enquiring About" value="One time payment">
-            <label for="age2">One time payment</label><br>  
+            <label for="age2">One time payment <button id="otpBtn" class="fc-accent-10 info-btn">(info)</button></label><br>  
             <input class="form-radio" type="radio" id="age3" name="Enquiring About" value="Other">
             <label for="age3">Other (please detail below)</label>
           </fieldset>
@@ -107,13 +111,58 @@
     </div>
   </section>
 
+  <div class="pricing-card-packageEnquiry" id="otpPriceCard">
+    <h3 class="price-heading">One time payment</h3>
+    <p class="heading">£999 <span class="para-main">/ One time payment</span></p>
+    <p class="para-main">4-page Website (additional pages may be added) This includes:</p>
+    <ul class="para-bold">
+      <li>Design and Development</li>
+      <li>SEO optimisation</li>
+      <li>High Page Speed score</li>
+      <li>Contact Form</li>
+    </ul>
+    <p class="para-main">As well as:</p>
+    <ul class="package-list para-bold">
+      <li>Hosting</li>
+      <li>Edits available on an hourly basis</li>
+      <li>Security Maintenance</li>
+      <li class="no-tick"><br></li>
+      <li class="no-tick"><br></li>
+      <li class="no-tick"><br></li>
+    </ul>
+    <div>
+    <button id="closePackageInfo1" class="btn">Close <img src="images/close_light.png" width="12px" alt=""></button>
+    </div>
+  </div>
+
+  <div class="pricing-card-packageEnquiry" id="subPriceCard">
+    <h3 class="price-heading">Subscription</h3>
+    <p class="heading">£149 <span class="para-main">/month</span></p>
+    <p class="para-main">4-page Website (additional pages may be added) This includes:</p>
+    <ul class="para-bold">
+      <li>Design and Development</li>
+      <li>SEO optimisation</li>
+      <li>High Page Speed score</li>
+      <li>Contact Form</li>
+    </ul>
+    <p class="para-main">As well as:</p>
+    <ul class="package-list para-bold">
+      <li>Hosting</li>
+      <li>Unlimited Edits</li>
+      <li>24/7 Support</li>
+      <li>Lifetime Maintenance and Updates</li>
+      <li>Google Analytics Reports</li>
+    </ul>
+    <div>
+      <button id="closePackageInfo2"  class="btn">Close <img src="images/close_light.png" width="12px" alt=""></button>
+    </div>
+  </div>
+
   <footer>
     <div class="socials">
       <img src="images/facebook.png" alt="">
       <img src="images/instagram.png" alt="">
     </div>
-
-    
 
     <div class="copyright">
       <p class="para-main">Copyright @ 2024 APT Web Design. All Rights Reserved</p>

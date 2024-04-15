@@ -278,8 +278,6 @@ header{
   }
 }
 
-
-
 /* Main Section */
 
 main{
@@ -579,7 +577,49 @@ article{
   gap: 2rem;
 }
 
-/* Form wrapper for packages page */
+/* footer section */
+
+footer{
+  margin-top: 4rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.socials{
+  img{
+    display: inline;
+    margin-right: 2rem;
+    width: 64px
+  }
+}
+
+.secondary-navigation{
+  ul{
+    list-style: none;
+    padding:0px;
+    li{
+      float:left;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media(min-width: 750px){
+  footer{
+    flex-direction: row;
+    gap: auto;
+    justify-content: space-evenly;
+  }
+  
+}
+
+
+/* Package Enquiry Page Style */
+
+
 .form-package-input-wrapper{
   display:flex;
   flex-direction: column;
@@ -624,49 +664,38 @@ article{
 }
 
 
-/* footer section */
+/* Packages info overlay */
 
-footer{
-  margin-top: 4rem;
-  padding: 1rem;
+.pricing-card-packageEnquiry{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 470px;
+  max-height: 650px;
+  background-color: var(--clr-accent-20);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  gap: 1rem;
+  border: 3px solid var(--clr-accent-10);
 }
 
-.socials{
-  img{
-    display: inline;
-    margin-right: 2rem;
-    width: 64px
-  }
+.info-btn{
+  background: none;
+  border: none;
 }
 
-.secondary-navigation{
-  ul{
-    list-style: none;
-    padding:0px;
-    li{
-      float:left;
-      margin-right: 1rem;
-    }
-  }
-}
-
-@media(min-width: 750px){
-  footer{
-    flex-direction: row;
-    gap: auto;
-    justify-content: space-evenly;
-  }
-  
+.info-btn:hover{
+  font-weight: var(--fw-bold);
 }
 
 
-
-
-
+#subPriceCard, #otpPriceCard{
+  display:none;
+}
 
 
 

@@ -15,3 +15,34 @@ const navToggle = document.querySelector("#navToggle");
         navImage.style.width = "40px";
       }
     })
+
+// Show/Hide Package info
+
+const subBtn = document.querySelector("#subBtn");
+const otpBtn = document.querySelector("#otpBtn");
+const otpPriceCard = document.querySelector("#otpPriceCard");
+const subPriceCard = document.querySelector("#subPriceCard");
+const closePackageInfo1 = document.querySelector("#closePackageInfo1");
+const closePackageInfo2 = document.querySelector("#closePackageInfo2");
+
+subBtn.addEventListener("click",function(){
+  subPriceCard.style.display = "block";
+});
+
+otpBtn.addEventListener("click",function(){
+  otpPriceCard.style.display = "block";
+});
+
+closePackageInfo1.addEventListener("click",function(){
+  otpPriceCard.style.display = "none";
+  subPriceCard.style.display = "none";
+})
+
+closePackageInfo2.addEventListener("click",function(){
+  otpPriceCard.style.display = "none";
+  subPriceCard.style.display = "none";
+})
+
+
+
+
