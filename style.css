@@ -415,7 +415,7 @@ main{
 
 .portfolio-section{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   justify-items: center;
   max-width: 1000px;
@@ -442,6 +442,12 @@ main{
 .portfolio-title{
   text-align: center;
   margin-top: 4rem;
+}
+
+@media(min-width: 750px){
+  .portfolio-section{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Article section */
