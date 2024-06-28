@@ -665,6 +665,39 @@ article{
 }
 
 
+/* animate article section */
+
+.article-left-anim{
+  animation: articleLeftAnimate ease-in-out 3s forwards;
+}
+
+@keyframes articleLeftAnimate {
+  from{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.article-right-anim{
+  animation: articleRightAnimate ease-in-out 2s forwards;
+}
+
+@keyframes articleRightAnimate {
+  from{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
 
 /* Contact Section */
 .contact-section{

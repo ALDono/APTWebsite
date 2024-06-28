@@ -19,15 +19,26 @@ const navToggle = document.querySelector("#navToggle");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
-    console.log(entry)
-    if (entry.isIntersecting){
+    console.log(entry.target.className)
+    let subStr = entry.target.className;
+    if (entry.isIntersecting && subStr.includes("about")){
       entry.target.classList.add("animate-about");
+    }
+    if (entry.isIntersecting && subStr.includes("article-left")){
+      entry.target.classList.add("article-left-anim");
+    }
+    if (entry.isIntersecting && subStr.includes("article-right")){
+      entry.target.classList.add("article-right-anim");
     }
   });
 });
 
 const aboutElement = document.querySelectorAll("#about");
+const articleLeftElement = document.querySelectorAll(".article-left");
+const articleRightElement = document.querySelectorAll(".article-right");
 
 aboutElement.forEach((el) => observer.observe(el));
+articleLeftElement.forEach((el) => observer.observe(el));
+articleRightElement.forEach((el) => observer.observe(el));
 
 
