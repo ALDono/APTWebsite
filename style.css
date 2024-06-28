@@ -172,6 +172,11 @@ a{
   box-shadow: 0px 1px 4px #00000040;;
 }
 
+.highlight{
+  color: var(--clr-accent-10);
+  font-weight: var(--fw-bold);
+}
+
 
 /****************/
 /* Main Styling */
@@ -235,6 +240,7 @@ header{
 
 .nav-links:hover{
   text-decoration: underline;
+  color: var(--clr-accent-10);
 }
 
 .logo img{
@@ -277,6 +283,15 @@ header{
   #navToggle{
     display:none;
   }
+}
+
+/* sale box */
+
+.sale{
+  display: none;
+  img{
+    max-width: 500px;
+  };
 }
 
 /* Main Section */
@@ -355,6 +370,38 @@ main{
   }
 }
 
+/* animation for Main */
+
+#main-head-anim-1{
+  opacity: 0;
+  animation: head-anim linear forwards;
+  animation-duration: 2s;
+}
+
+#main-head-anim-2{
+  opacity: 0;
+  animation: head-anim linear forwards;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+#main-head-anim-3{
+  opacity: 0;
+  animation: head-anim ease-in-out forwards;
+  animation-delay: 2s;
+  animation-duration: 2s;
+}
+
+@keyframes head-anim {
+  0%{
+    opacity: 0;
+    transform: scale(95%);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
 
 /* about section */
 
@@ -409,6 +456,27 @@ main{
     padding: 2rem;
   }
 }
+
+/* animation for about */
+
+#about{
+  opacity: 0;
+}
+
+.animate-about{
+  animation: about-anim 2s ease-in-out forwards;
+}
+
+@keyframes about-anim {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+  
+}
+
+
 
 
 /* Portfolio Section */
