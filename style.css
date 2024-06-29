@@ -665,7 +665,7 @@ article{
 }
 
 
-/* animate article section */
+/* animation for article section */
 
 .article-left-anim{
   animation: articleLeftAnimate ease-in-out 3s forwards;
